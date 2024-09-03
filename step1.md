@@ -20,28 +20,27 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Login to the Administrative Interface</div>
+<div class="step-title">Check your Keys</div>
 
-## Wait a few moments...
+```
+http :9011/api/key
+```
 
-The servers are starting up so you can work with them.  This usually takes less than a minute, and then the login screen for the FusionAuth UI will appear in the middle column.
+You can see the keys that have been set up for your account here.  The kickstart for this module created the key you need to perform different actions, and they are automatically included in the `http` commands given here.
 
-Once the login screen appears, you can login with the following credentials:
+## Create a new user 
 
-- *Username:* admin@example.com
-- *Password:* password
+Create a new user with a random ID
 
+```
+http POST :9011/api/user
+```
 
-Once you have logged in you will be able to add a new user and assign them to the application.
+Create a new user with a specific ID
 
-## Add a new user
-
-- Click the hamburger icon on the upper left hand side of the page
-- Select 'Users'
-- Click the green Plus icon to add a new user
-- Fill in the Email and Username, the phone is optional
-- Since we don't have an email server running, you need to deselect 'Send email to set up password' and choose a password here instead.
-- After choosing (and verifying) the password, click the blue Save icon in the upper right hand side of the page.
+```
+http POST :9011/api/user/myuserid
+```
 
 ## Register user for application
 

@@ -13,7 +13,7 @@
     <div class="container px-4 py-2">
      <div class="row g-4 py-2 row-cols-1 row-cols-lg-1">
       <div class="feature col div-choice">
-            <div class="scenario-description">Explore the FusionAuth UI with a Simple Application</div>
+            <div class="scenario-description">Explore FusionAuth from the Command Line</div>
             <ul>
               <li><span class="scenario-description-attribute">Difficulty</span>: Beginner</li>
               <li><span class="scenario-description-attribute">Time</span>: 10 minutes</li>
@@ -22,7 +22,6 @@
             <ul>
               <li><span class="scenario-objective">Create a new user in FusionAuth</span></li>
               <li><span class="scenario-objective">Assign that user to an application</span></li>
-              <li><span class="scenario-objective">Login to the application with your new user</span></li>
             </ul>
       </div>
      </div>

@@ -22,11 +22,6 @@ tasks:
       mkdir ~gitpod/.config/httpie
       cp .config/httpie/config.json ~gitpod/.config/httpie
       gp open intro.md
-     
-
-  # --------------------------------------
-  - name: working-terminal
-    openMode: split-right
 
 ports:
   - port: 9011

@@ -2,7 +2,7 @@
 
 This repository contains an environment where you can make API calls directly to the FusionAuth server, and instructions to follow to learn how the APIs work.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/synedra/fusionauth-quickstart-javascript-react-web)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/synedra/fusionauth-httpie)
 
 ## Overview
 

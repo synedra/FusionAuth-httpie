@@ -20,8 +20,6 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Check your Keys</div>
-
 # Check your keys
 
 ```

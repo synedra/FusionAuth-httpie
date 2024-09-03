@@ -18,8 +18,6 @@ tasks:
     command: |
       gp open intro.md
       fusionauth/bin/startup.sh
-      echo "Waiting for the FusionAuth server to start up"
-      bash wait.sh
       pip3 install httpie 
       mkdir ~gitpod/.config/httpie
       cp .config/httpie/config.json ~gitpod/.config/httpie

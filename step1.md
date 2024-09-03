@@ -22,6 +22,8 @@
 
 <div class="step-title">Check your Keys</div>
 
+# Check your keys
+
 ```
 http :9011/api/key
 ```

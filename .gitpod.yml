@@ -1,10 +1,25 @@
-tasks:
+image: 
+  file: Dockerfile
 
+tasks:
   # ------------------------------------
   # Start FusionAuth in Docker
   # ------------------------------------
-  - name: fusionauth-server
+    - name: fusionauth-server
+    env: 
+      DATABASE_URL: "jdbc:postgresql://localhost:5432/fusionauth"
+      DATABASE_ROOT_USERNAME: "gitpod"
+      DATABASE_ROOT_PASSWORD: "password"
+      FUSIONAUTH_APP_KICKSTART_FILE: "/workspace/fusionauth-quickstart-javascript-react-web/kickstart/kickstart.json"
+      INSTALL_SEARCH: 1
+    init: |
+      bash /workspace/fusionauth-quickstart-javascript-react-web/install.sh   
+      bash /workspace/fusionauth-quickstart-javascript-react-web/ports.sh
     command: |
+      gp open intro.md
+      fusionauth/bin/startup.sh
+      echo "Waiting for the FusionAuth server to start up"
+      bash wait.sh
       pip3 install httpie 
       mkdir ~gitpod/.config/httpie
       cp .config/httpie/config.json ~gitpod/.config/httpie

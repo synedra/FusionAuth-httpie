@@ -11,11 +11,11 @@ tasks:
       DATABASE_URL: "jdbc:postgresql://localhost:5432/fusionauth"
       DATABASE_ROOT_USERNAME: "gitpod"
       DATABASE_ROOT_PASSWORD: "password"
-      FUSIONAUTH_APP_KICKSTART_FILE: "/workspace/fusionauth-quickstart-javascript-react-web/kickstart/kickstart.json"
+      FUSIONAUTH_APP_KICKSTART_FILE: "/workspace/FusionAuth-httpie/kickstart/kickstart.json"
       INSTALL_SEARCH: 1
     init: |
-      bash /workspace/fusionauth-quickstart-javascript-react-web/install.sh   
-      bash /workspace/fusionauth-quickstart-javascript-react-web/ports.sh
+      bash /workspace/FusionAuth-httpie/install.sh   
+      bash /workspace/FusionAuth-httpie/ports.sh
     command: |
       gp open intro.md
       fusionauth/bin/startup.sh
@@ -24,11 +24,6 @@ tasks:
       pip3 install httpie 
       mkdir ~gitpod/.config/httpie
       cp .config/httpie/config.json ~gitpod/.config/httpie
-      echo "Starting up the ChangeBank React application"
-      cd complete-application
-      npm install
-      npm run dev &
-      gp preview `gp url 9011`/admin
      
 
   # --------------------------------------
@@ -55,3 +50,6 @@ ports:
     onOpen: ignore
     visibility: public
 
+vscode:
+   extensions:
+    - https://github.com/DataStax-Academy/katapod/releases/download/stable/katapod-stable.vsix

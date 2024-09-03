@@ -18,13 +18,14 @@ tasks:
       bash /workspace/FusionAuth-httpie/ports.sh
     command: |
       gp open intro.md
-      fusionauth/bin/startup.sh
-      echo "Waiting for the FusionAuth server to start up"
-      bash wait.sh
-      pip3 install httpie 
       mkdir ~gitpod/.config/httpie
       cp .config/httpie/config.json ~gitpod/.config/httpie
-     
+      fusionauth/bin/startup.sh
+      pip3 install httpie 
+      echo "Waiting for the FusionAuth server to start up"
+      bash serverup.sh
+      echo "Server ready!"
+           
 
   # --------------------------------------
   - name: working-terminal
